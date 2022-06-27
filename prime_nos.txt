@@ -1,0 +1,29 @@
+#include<stdio.h>
+void main()
+{
+    int i,n1,n2,f=0,count=0;
+    printf("enter initial number\n");
+    scanf("%d",&n1);
+    printf("enter  final number\n");
+    scanf("%d",&n2);
+while(n1<=n2)
+{
+    for(i=1;i<=n1;i++)
+    {
+        if(n1%i==0)
+        f++;
+    }
+    if(f==2)
+    {
+        printf("%d is a prime number\n",n1);
+        count++;
+    }
+    else
+    {
+         printf("%d is not a prime number\n",n1);
+    }
+f=0;
+n1++;
+}
+printf("there are %d prime numbers",count);
+}
